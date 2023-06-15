@@ -18,4 +18,12 @@ public class ActionHelper extends DriverHelper {
                 androidUIAutomator("new UiScrollable(new UiSelector())" +
                         ".scrollIntoView(text(\"" + element + "\"));"));
     }
+
+    public void swipe(WebElement firstElement, String direction){
+        ((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
+                "elementId", ((RemoteWebElement) firstElement).getId(),
+                "direction", direction.toLowerCase(),
+                "percent", 0.75
+        ));
+    }
 }
