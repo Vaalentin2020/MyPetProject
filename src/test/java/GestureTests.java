@@ -17,7 +17,10 @@ public class GestureTests extends DriverHelper {
         assertThat(firstImage.getAttribute("focusable")).isEqualTo("true");
         //Perform swiping
         actionHelper.swipe(firstImage, "left");
-        //Check the element isn't in focus after swipe
+        //Check the element isn't in focus after swipe AND 2nd element is focused
         assertThat(firstImage.getAttribute("focusable")).isEqualTo("false");
+        assertThat(locatorHelper.findByXPath("//(android.widget.ImageView)[2]").
+                getAttribute("focusable")).
+                    isEqualTo("true");
     }
 }

@@ -13,7 +13,7 @@ public class BasicTests extends DriverHelper {
     ActionHelper actionHelper = new ActionHelper();
 
     @Test(enabled = false)
-    public void firstTest() throws MalformedURLException {
+    public void firstTest() {
 
         String wifiText = "new wifi";
         driver.findElement(AppiumBy.accessibilityId("Preference")).click();
