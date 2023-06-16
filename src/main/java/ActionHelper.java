@@ -19,7 +19,7 @@ public class ActionHelper extends DriverHelper {
                         ".scrollIntoView(text(\"" + element + "\"));"));
     }
 
-    public void swipe(WebElement firstElement, String direction){
+    public void swipe(WebElement firstElement, String direction) {
         ((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
                 "elementId", ((RemoteWebElement) firstElement).getId(),
                 "direction", direction.toLowerCase(),
