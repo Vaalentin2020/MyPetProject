@@ -15,7 +15,9 @@ public class DriverHelper {
     public void configureAppium() throws MalformedURLException {
         UiAutomator2Options options = new UiAutomator2Options();
         options.setDeviceName("Pixel6");
-        options.setApp("/Users/valentingavrilov/IdeaProjects/AppiumPetProject/src/main/java/app/ApiDemos-debug.apk");
+        //options.setApp("/Users/valentingavrilov/IdeaProjects/AppiumPetProject/src/main/java/app/ApiDemos-debug.apk");
+        options.setApp("/Users/valentingavrilov/IdeaProjects/AppiumPetProject/src/main/java/app/General-Store.apk");
+
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(10000));
     }
